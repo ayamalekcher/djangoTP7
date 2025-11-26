@@ -22,7 +22,16 @@ TEMPLATES=[{
   'django.contrib.messages.context_processors.messages']},
 }]
 WSGI_APPLICATION="demoDjango.wsgi.application"
-DATABASES={'default':{'ENGINE':'django.db.backends.sqlite3','NAME': BASE_DIR/'db.sqlite3'}}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mon_django_db',
+        'USER': 'mon_django_db_user',
+        'PASSWORD': 'db_password',
+        'HOST': 'dpg-d4jeebeuk2gs73bj5epg-a',
+        'PORT': '5432',
+    }
+}
 LANGUAGE_CODE="en-us"
 TIME_ZONE="UTC"
 USE_I18N=True
